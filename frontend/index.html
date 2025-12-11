@@ -1,0 +1,22 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pacientes - DataCare</title>
+</head>
+<body>
+  <h1>Listado de Pacientes</h1>
+
+  <button onclick="logout()">Cerrar sesión</button>
+  <a href="create.html">Crear Paciente</a>
+  <a href="soap.html">Probar SOAP</a>
+  <ul id="lista"></ul>
+
+  <script src="js/api.js"></script>
+  <script>
+    protegerPagina();
+    cargarPacientes();
+  </script>
+</body>
+</html>

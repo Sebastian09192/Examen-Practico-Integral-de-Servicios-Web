@@ -1,0 +1,29 @@
+<!-- frontend/login.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - DataCare</title>
+</head>
+<body>
+  <h1>Login DataCare</h1>
+
+  <form id="loginForm">
+    <label>Usuario:</label><br>
+    <input type="text" id="username" /><br><br>
+
+    <label>Contraseña:</label><br>
+    <input type="password" id="password" /><br><br>
+
+    <button type="submit">Ingresar</button>
+  </form>
+
+  <p id="error" style="color:red;"></p>
+
+  <script src="js/api.js"></script>
+  <script>
+    const form = document.getElementById("loginForm");
+    form.addEventListener("submit", login);
+  </script>
+</body>
+</html>

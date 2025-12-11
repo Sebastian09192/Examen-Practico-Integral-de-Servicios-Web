@@ -1,0 +1,32 @@
+<!-- frontend/create.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crear Paciente - DataCare</title>
+</head>
+<body>
+  <h1>Crear Nuevo Paciente</h1>
+
+  <button onclick="logout()">Cerrar sesión</button>
+  <a href="index.html">← Volver al listado</a>
+
+  <form onsubmit="crear(event)" style="margin-top:20px;">
+    <label>Nombre completo:</label><br>
+    <input id="nombre" required><br><br>
+
+    <label>Correo electrónico:</label><br>
+    <input id="correo" required><br><br>
+
+    <label>Teléfono:</label><br>
+    <input id="telefono" required><br><br>
+
+    <button type="submit">Crear Paciente</button>
+  </form>
+
+  <script src="js/api.js"></script>
+  <script>
+    protegerPagina();
+  </script>
+</body>
+</html>

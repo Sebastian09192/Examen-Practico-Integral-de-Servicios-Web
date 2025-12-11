@@ -1,0 +1,33 @@
+<!-- frontend/edit.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Editar Paciente - DataCare</title>
+</head>
+<body>
+  <h1>Editar Paciente</h1>
+
+  <button onclick="logout()">Cerrar sesión</button>
+  <a href="index.html">← Volver al listado</a>
+
+  <form onsubmit="editar(event)" style="margin-top:20px;">
+    <label>Nombre completo:</label><br>
+    <input id="nombre" required><br><br>
+
+    <label>Correo electrónico:</label><br>
+    <input id="correo" required><br><br>
+
+    <label>Teléfono:</label><br>
+    <input id="telefono" required><br><br>
+
+    <button type="submit">Guardar Cambios</button>
+  </form>
+
+  <script src="js/api.js"></script>
+  <script>
+    protegerPagina();
+    cargarDatosEdit();  // cargar los datos actuales del paciente
+  </script>
+</body>
+</html>

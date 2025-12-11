@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SOAP Tester</title>
+</head>
+<body>
+  <h1>Probar Servicio SOAP</h1>
+
+  <button onclick="logout()">Cerrar sesión</button>
+  <a href="index.html">← Volver</a>
+
+  <h2>Suma SOAP</h2>
+  <input id="a" placeholder="Número A">
+  <input id="b" placeholder="Número B">
+  <button onclick="probarSuma()">Sumar</button>
+  <p id="resultadoSuma"></p>
+
+  <h2>Validar Nombre SOAP</h2>
+  <input id="nombre" placeholder="Nombre">
+  <button onclick="probarValidar()">Validar</button>
+  <p id="resultadoValidar"></p>
+
+  <script src="js/api.js"></script>
+  <script>
+    protegerPagina();
+
+    async function probarSuma() {
+      const a = document.getElementById("a").value;
+      const b = document.getElementById("b").value;
+
+      const res = await fetch(`${API_BASE}/soap/sumar?a=${a}&b=${b}`, {
+        headers: { Authorization: `Bearer ${getToken()}` }
+      });
+
+      const data = await res.json();
+      document.getElementById("resultadoSuma").textContent =
+        "Resultado: " + data.resultado;
+    }
+
+    async function probarValidar() {
+      const nombre = document.getElementById("nombre").value;
+
+      const res = await fetch(`${API_BASE}/soap/validar?nombre=${nombre}`, {
+        headers: { Authorization: `Bearer ${getToken()}` }
+      });
+
+      const data = await res.json();
+      document.getElementById("resultadoValidar").textContent =
+        "¿Nombre válido?: " + data.valido;
+    }
+  </script>
+</body>
+</html>
