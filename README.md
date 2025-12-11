@@ -1,3 +1,4 @@
+```
 DATACARE SOLUTIONS S.A. – PROYECTO INTEGRADOR
 Aplicación Web con API REST + SOAP + JWT + Rate Limit + Cifrado + Borrado Lógico
 Curso: Tecnologías y Sistemas Web III
@@ -27,7 +28,7 @@ El sistema fue construido utilizando Node.js + Express en el backend y MySQL/XAM
 ============================================================
 2. ESTRUCTURA DEL PROYECTO
 
-bash ```
+
 datacare-examen/
 ├─ backend/
 │ ├─ server.js
@@ -56,7 +57,7 @@ datacare-examen/
 │ └─ js/
 │ └─ api.js
 ├─ README.md
-```
+
 ============================================================
 3. INSTALACIÓN Y CONFIGURACIÓN
 
